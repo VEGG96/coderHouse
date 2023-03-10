@@ -15,8 +15,8 @@ const Item = ({ element }) => {
     <Card
       sx={{
         width: 345,
-        height: 350,
-        backgroundColor: "black",
+        height: 430,
+        backgroundColor: "gray",
         color: "white",
         border: "1px solid black",
         borderRadius: "10px",
@@ -24,11 +24,11 @@ const Item = ({ element }) => {
       }}
     >
       <CardMedia
-        sx={{ height: 160, backgroundColor: "whitesmoke" }}
+        sx={{ height: 200, backgroundColor: "whitesmoke" }}
         image={element.img}
         title="green iguana"
       />
-      <CardContent sx={{ height: 130 }}>
+      <CardContent sx={{ height: 180 }}>
         <Typography gutterBottom variant="h5" component="div" align="center">
           {element.title}
         </Typography>
@@ -37,7 +37,13 @@ const Item = ({ element }) => {
       </CardContent>
       <CardActions>
         <Link to={`/itemDetail/${element.id}`}>
-          <Button size="small" variant="contained" color="primary">
+          <Button
+            size="small"
+            variant="contained"
+            style={{
+              backgroundColor: "orange",
+            }}
+          >
             Ver detalle
           </Button>
         </Link>
